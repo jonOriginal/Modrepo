@@ -5,4 +5,4 @@ cd modsrepo
 powershell.exe Invoke-RestMethod -Uri https://github.com/jonOriginal/Modrepo/archive/main.zip -OutFile main.zip
 tar -xf main.zip
 cd Modrepo-main
-xcopy "%temp%/modsrepo/Modrepo-main/*.*" "%appdata%/.minecraft/mods" /Y /f /Exclude:tlauncher.exe+forge.jar
+xcopy /EXCLUDE:exclude.txt "%temp%/modsrepo/Modrepo-main/*.*" "%appdata%/.minecraft/mods" /Y /f 
